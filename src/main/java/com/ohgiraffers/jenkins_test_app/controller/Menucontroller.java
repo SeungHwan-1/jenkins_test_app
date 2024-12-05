@@ -19,7 +19,6 @@ public class Menucontroller {
     @Autowired
     private Menuservice menuservice;
 
-    @CrossOrigin(origins = "http://localhost:3001")
     @GetMapping("/select")
     public ResponseEntity selectAllMenu(){
 
