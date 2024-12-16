@@ -28,7 +28,7 @@ public class Menucontroller {
         else {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("서버 오류 발생11");
+                    .body("서버 오류 발생111");
 
         }
 
