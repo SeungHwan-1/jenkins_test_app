@@ -21,7 +21,7 @@ public class HttpToHttpsRedirectConfig implements WebMvcConfigurer {
     private Connector createHttpConnector() {
         Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("http");
-        connector.setPort(8089);  // HTTP 포트
+        connector.setPort(1557);  // HTTP 포트
         connector.setSecure(false);
         connector.setRedirectPort(443);  // HTTPS 포트
         return connector;
@@ -30,9 +30,9 @@ public class HttpToHttpsRedirectConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")  // 모든 엔드포인트에 대해 CORS 허용
-                .allowedOrigins("https://14-cloud.vercel.app","http://localhost:1557")  // 허용할 출처
+                .allowedOrigins("*")  // 허용할 출처
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*");
     }
-
+    /*https://14-cloud.vercel.app","http://localhost:1557*/
 }
