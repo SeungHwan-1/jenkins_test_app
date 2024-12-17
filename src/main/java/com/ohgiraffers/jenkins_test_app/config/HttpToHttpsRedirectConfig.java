@@ -23,7 +23,7 @@ public class HttpToHttpsRedirectConfig implements WebMvcConfigurer {
         connector.setScheme("http");
         connector.setPort(1557);  // HTTP 포트
         connector.setSecure(false);
-        connector.setRedirectPort(443);  // HTTPS 포트
+        connector.setRedirectPort(3013);  // HTTPS 포트
         return connector;
     }
 
@@ -34,5 +34,5 @@ public class HttpToHttpsRedirectConfig implements WebMvcConfigurer {
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*");
     }
-    /*https://14-cloud.vercel.app","http://localhost:1557*/
+    /*https://14-cloud.vercel.app","https://localhost:1557*/
 }
