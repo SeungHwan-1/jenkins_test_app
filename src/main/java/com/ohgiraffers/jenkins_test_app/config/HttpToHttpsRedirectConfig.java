@@ -21,7 +21,7 @@ public class HttpToHttpsRedirectConfig implements WebMvcConfigurer {
     private Connector createHttpConnector() {
         Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("http");
-        connector.setPort(1557);  // HTTP 포트
+        connector.setPort(3013);  // HTTP 포트
         connector.setSecure(false);
         connector.setRedirectPort(3013);  // HTTPS 포트
         return connector;
